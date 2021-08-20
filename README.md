@@ -1,3 +1,3 @@
 # jvastos.github.io
 
-Just testing
+Just testing and learning
