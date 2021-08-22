@@ -1,0 +1,85 @@
+body {
+    background-color: greenyellow;
+    font-size:  large;
+    color: rgb(255, 80, 103);
+    background-image: url('70s.gif');
+    background-size: 1%;
+    font-family: 'Righteous', cursive;
+}
+
+.container {
+    width: 1500px;
+    margin: 5vh auto;
+    border: 1px solid red;
+    position: relative;
+}
+
+.video {
+    position: absolute;
+    width: 100%;
+}
+
+.video video {
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    left: 35%;
+    top: 5vh;
+}
+
+textarea {
+    resize: none;
+}
+
+@media only screen and (max-width: 1500px) {
+    /* For mobile phones: */
+
+    .container {
+        width: 100%;
+        margin: 5vh auto;
+        border: 1px solid red;
+        position: relative;
+    }
+
+    .video {
+        position: absolute;
+    }
+
+    .content {
+      padding: 2vh; 
+      background-color: rgb(241, 233, 188);
+      position: absolute;
+      top: 50vh;
+      left: 10%;
+      width: 75%;
+      opacity: 0.9;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .container {
+        width: 100%;
+        margin: 5vh auto;
+        border: 1px solid red;
+        position: static;
+    }
+
+    .video {
+        position: static;
+    }
+
+    .content {
+      padding: 2vh;
+      margin-top: 1vh;  
+      background-color: rgb(241, 233, 188);
+      position: static;
+      width: auto;
+      opacity: 1;
+    }
+  }
+
+  
