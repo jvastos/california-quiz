@@ -13,6 +13,16 @@ body {
     position: relative;
 }
 
+h1 {
+    display: none;
+    position: absolute;
+    font-size: 7vw;
+    width: 80%;
+    left: 10%;
+    opacity: 0.9;
+    top: 10vh;
+}
+
 .video {
     position: absolute;
     width: 100%;
@@ -35,9 +45,15 @@ textarea {
 @media only screen and (max-width: 1500px) {
     /* For mobile phones: */
 
+    h1 {
+        display: block;
+        z-index: 1;
+        top: 10vh;
+    }
+
     .container {
         width: 100%;
-        margin: 5vh auto;
+        margin: 1vh auto;
         position: relative;
     }
 
@@ -46,22 +62,29 @@ textarea {
     }
 
     .content {
-      padding: 2vh; 
+      padding: 2vw; 
       background-color: rgb(241, 233, 188);
       position: absolute;
       top: 50vh;
       left: 10%;
       width: 75%;
-      opacity: 0.9;
+      opacity: 0.95;
     }
   }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 900px) {
     /* For mobile phones: */
+
+    h1 {
+        display: block;
+        left: auto;
+        padding: 2vw;
+        top: 10vh;
+    }
 
     .container {
         width: 100%;
-        margin: 5vh auto;
+        margin: 1vh auto;
         position: static;
     }
 
@@ -70,7 +93,7 @@ textarea {
     }
 
     .content {
-      padding: 2vh;
+      padding: 2vw;
       margin-top: 1vh;  
       background-color: rgb(241, 233, 188);
       position: static;
