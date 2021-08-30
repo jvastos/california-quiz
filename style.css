@@ -23,15 +23,11 @@ h1 {
     top: 10vh;
 }
 
-.video {
+#video {
     position: absolute;
     width: 100%;
-    
-}
-
-.video video {
-    width: 100%;
     border-radius: 15% / 40%;
+    background-image: url("california-dreamin-mute.gif");
 }
 
 .content {
@@ -60,12 +56,12 @@ textarea {
         position: relative;
     }
 
-    .video {
+    #video {
         position: absolute;
     }
 
     .content {
-      padding: 2vw; 
+      padding: 2vw;
       background-color: rgb(241, 233, 188);
       position: absolute;
       top: 50vh;
@@ -91,7 +87,7 @@ textarea {
         position: static;
     }
 
-    .video {
+    #video {
         position: static;
     }
 
