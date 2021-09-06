@@ -24,7 +24,13 @@ body {
   text-align: center;
   padding: 10px;
   font-size:  1.1rem;
+  overflow-x: hidden; //hide horizontal scroll-bar
+
+ -ms-overflow-style: none;  /* hide scroll-bar in IE and Edge */
+  scrollbar-width: none;  /* hide scroll-bar in Firefox */
   
+  &::-webkit-scrollbar {
+    display: none;
 
   @media screen and (min-width: 481px) {
     font-size: 1rem;
@@ -33,6 +39,12 @@ body {
   @media screen and (min-width: 1600px) {
     font-size: 25px;
  }
+
+.hide-scroll-chrome::-webkit-scrollbar {
+  display: none;
+}
+
+  }
 
 
   h1 {

@@ -24,16 +24,27 @@ body {
   text-align: center;
   padding: 10px;
   font-size: 1.1rem;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  /* hide scroll-bar in IE and Edge */
+  scrollbar-width: none;
+  /* hide scroll-bar in Firefox */
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 @media screen and (min-width: 481px) {
-  .container {
+  .container::-webkit-scrollbar {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  .container {
+  .container::-webkit-scrollbar {
     font-size: 25px;
   }
+}
+.container::-webkit-scrollbar .hide-scroll-chrome::-webkit-scrollbar {
+  display: none;
 }
 .container h1 {
   font-size: 5rem;
