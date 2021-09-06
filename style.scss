@@ -31,6 +31,7 @@ body {
   
   &::-webkit-scrollbar {
     display: none;
+  }
 
   @media screen and (min-width: 481px) {
     font-size: 1rem;
@@ -59,7 +60,7 @@ body {
        font-size: 120px;
     }
   }
-}
+
 
   /* The Modal (background) */
 .modal {

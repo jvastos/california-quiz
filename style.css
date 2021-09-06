@@ -34,29 +34,30 @@ body {
   display: none;
 }
 @media screen and (min-width: 481px) {
-  .container::-webkit-scrollbar {
+  .container {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  .container::-webkit-scrollbar {
+  .container {
     font-size: 25px;
   }
 }
-.container::-webkit-scrollbar .hide-scroll-chrome::-webkit-scrollbar {
+.container .hide-scroll-chrome::-webkit-scrollbar {
   display: none;
 }
-.container h1 {
+
+h1 {
   font-size: 5rem;
   padding: 15px;
 }
 @media screen and (max-width: 481px) {
-  .container h1 {
+  h1 {
     font-size: 3rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  .container h1 {
+  h1 {
     font-size: 120px;
   }
 }
