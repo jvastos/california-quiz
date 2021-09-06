@@ -1,103 +1,79 @@
 body {
-    background-color: greenyellow;
-    font-size:  large;
-    color: rgb(255, 80, 103);
-    background-image: url('70s.gif');
-    background-size: 1%;
-    font-family: 'Righteous', cursive;
+  background-color: greenyellow;
+  font-size: 1.1rem;
+  color: #ff5067;
+  background-image: url("70s.gif");
+  background-size: 1%;
+  font-family: "Righteous", cursive;
 }
 
 .container {
-    width: 1500px;
-    margin: 5vh auto;
-    position: relative;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  background-image: url("./california-dreamin-mute.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15%/40%;
+  overflow: scroll;
+  text-align: center;
+  padding: 10px;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+}
+.container h1 {
+  font-size: 7vw;
 }
 
-h1 {
-    display: none;
-    position: absolute;
-    font-size: 7vw;
-    width: 80%;
-    left: 10%;
-    opacity: 0.9;
-    top: 10vh;
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
-#video {
-    position: absolute;
-    width: 100%;
-    border-radius: 15% / 40%;
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
-.content {
-    position: absolute;
-    left: 35%;
-    top: 5vh;
-    border-radius: 3% 3% 30% 3% / 3% 3% 40% 3%;
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-textarea {
-    resize: none;
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1500px) {
-    /* For mobile phones: */
-
-    h1 {
-        display: block;
-        z-index: 1;
-        top: 10vh;
-    }
-
-    .container {
-        width: 100%;
-        margin: 1vh auto;
-        position: relative;
-    }
-
-    #video {
-        position: absolute;
-    }
-
-    .content {
-      padding: 2vw;
-      background-color: rgb(241, 233, 188);
-      position: absolute;
-      top: 50vh;
-      left: 10%;
-      width: 75%;
-      opacity: 0.95;
-    }
-  }
-  
-  @media only screen and (max-width: 900px) {
-    /* For mobile phones: */
-
-    h1 {
-        display: block;
-        left: auto;
-        padding: 2vw;
-        top: 10vh;
-    }
-
-    .container {
-        width: 100%;
-        margin: 1vh auto;
-        position: static;
-    }
-
-    #video {
-        position: static;
-    }
-
-    .content {
-      padding: 2vw;
-      margin-top: 1vh;  
-      background-color: rgb(241, 233, 188);
-      position: static;
-      width: auto;
-      opacity: 1;
-    }
-  }
-
-  
+/*# sourceMappingURL=style.css.map */
