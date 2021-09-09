@@ -1,7 +1,7 @@
 let loader = document.querySelector(".loader-wraper");
 
 window.onload = function() {
- loader.style.display = 'auto';
+ loader.style.display = 'none';
 }
 
 document.getElementById("myBtn").addEventListener("click", function submitBreak(event){
