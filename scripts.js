@@ -1,6 +1,17 @@
-$(window).on("load", function(){
-    $("loader-wraper").fadeOut("slow")
-});
+/*document.getElementsByClassName('container').on("load", function(){
+    document.getElementsByClassName('loader-wraper').style.display = "none";
+});*/
+
+let loader = document.querySelector(".loader-wraper");
+
+window.onload = function() {
+ loader.style.display = 'none';
+}
+
+
+/*$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+});*/
 
 document.getElementById("myBtn").addEventListener("click", function submitBreak(event){
     event.preventDefault()
