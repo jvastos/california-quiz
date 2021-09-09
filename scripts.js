@@ -1,3 +1,7 @@
+$(window).on("load", function(){
+    $("loader-wraper").fadeOut("slow")
+});
+
 document.getElementById("myBtn").addEventListener("click", function submitBreak(event){
     event.preventDefault()
   });
