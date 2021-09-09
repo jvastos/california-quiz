@@ -5,7 +5,7 @@
 let loader = document.querySelector(".loader-wraper");
 
 window.onload = function() {
- loader.style.display = 'none';
+ loader.style.display = 'auto';
 }
 
 
