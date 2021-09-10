@@ -3,7 +3,7 @@ body {
   color: #ff5067;
   background-image: url("70s.gif");
   background-size: 1%;
-  font-family: "Righteous", cursive;
+  font-family: "Righteous", sans-serif;
 }
 
 .container {
