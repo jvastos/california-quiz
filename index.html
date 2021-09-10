@@ -48,20 +48,33 @@
             <br>
             <br>
             <h2>You see a church...</h2>
-            <input type="checkbox" id="stop" name="stop" value="stop">
-            <label for="stop">I stop</label>
+            <div class="question-wrappe">
+                <span>
+                    <input type="checkbox" id="stop" name="stop" value="stop">
+                    &nbsp;
+                    <label for="stop">I&nbsp;stop</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="sign" name="sign" value="sign">&nbsp;
+                    <label for="sign">I&nbsp;make&nbsp;the&nbsp;sign&nbsp;of&nbsp;the&nbsp;cross</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="knees" name="knees" value="knees">
+                    &nbsp;
+                    <label for="knees">I&nbsp;get&nbsp;down&nbsp;on&nbsp;my&nbsp;knees</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="pray" name="pray" value="pray">
+                    &nbsp;
+                    <label for="pray">I&nbsp;pretend&nbsp;to&nbsp;pray</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="afraid" name="afraid" value="afraid">
+                    &nbsp;
+                    <label for="afraid">I&nbsp;cross&nbsp;the&nbsp;road&nbsp;afraid</label>
+                </span>
+            </div>
             <br>
-            <input type="checkbox" id="sign" name="sign" value="sign">
-            <label for="sign">I make the sign of the cross</label>
-            <br>
-            <input type="checkbox" id="knees" name="knees" value="knees">
-            <label for="knees">I get down on my knees</label>
-            <br>
-            <input type="checkbox" id="pray" name="pray" value="pray">
-            <label for="pray">I pretend to pray</label>
-            <br>
-            <input type="checkbox" id="afraid" name="afraid" value="afraid">
-            <label for="afraid">I cross the road afraid</label>
             <br>
             <h2>What does the preacher like?</h2>
             <input type="radio" id="cold" name="preachersPreference" value="cold">
@@ -72,6 +85,7 @@
             <label for="bold">The bold</label>
             <input type="radio" id="bald" name="preachersPreference" value="bald">
             <label for="bald">The bald</label>
+            <br>
             <br>
             <h2 for="thePreacherKnows">and he knows I'm gonna...</h2>
             <textarea id="thePreacherKnows" name="thePreacherKnows" rows="1" placeholder="(not go anywhere)"></textarea>
@@ -87,6 +101,7 @@
             <input type="checkbox" id="dreamin3" name="dreamin3" value="dreamin">
             <label for="dreamin3">dreamin</label>
             <br>
+            <br>
             <h2>...about where?</h2>
             <textarea id="california" name="california" rows="1" placeholder="(a bear in a flag?!)"></textarea>
             <br>
@@ -94,13 +109,10 @@
             <h2>What season is it?</h2>
             <input type="radio" id="winter" name="season" value="winter">
             <label for="winter">Winter</label>
-            <br> 
             <input type="radio" id="summer" name="season" value="summer">
             <label for="summer">Summer</label> 
-            <br>
             <input type="radio" id="fall" name="season" value="fall">
             <label for="fall">Fall</label>
-            <br>
             <input type="radio" id="spring" name="season" value="spring">
             <label for="spring">Spring</label>
             <br>

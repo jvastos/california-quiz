@@ -186,5 +186,8 @@ body {
     opacity: 0;
   }
 }
+form span {
+  display: block;
+}
 
 /*# sourceMappingURL=style.css.map */
