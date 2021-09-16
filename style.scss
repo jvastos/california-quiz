@@ -1,9 +1,22 @@
+$fontColor: rgb(255, 80, 103);
+$mainFont: 'Righteous', sans-serif;
+
 body {
-    background-color: greenyellow;
-    color: rgb(255, 80, 103);
+    color: $fontColor;
     background-image: url('70s.gif');
     background-size: 1%;
-    font-family: 'Righteous', sans-serif;
+    font-family: $mainFont;
+    overflow-x: hidden; //hide horizontal scroll-bar
+    -ms-overflow-style: none;  /* hide scroll-bar in IE and Edge */
+    scrollbar-width: none;  /* hide scroll-bar in Firefox */
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scroll-chrome::-webkit-scrollbar {
+      display: none;
+      }
 }
 
 .container {
@@ -14,13 +27,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15% / 40%;
-  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
   text-align: center;
   padding: 10px;
   font-size:  1.1rem;
@@ -33,14 +49,6 @@ body {
     display: none;
   }
 
-  @media screen and (min-width: 481px) {
-    font-size: 1rem;
-  }
-
-  @media screen and (min-width: 1600px) {
-    font-size: 25px;
- }
-
   .hide-scroll-chrome::-webkit-scrollbar {
   display: none;
   }
@@ -49,8 +57,7 @@ body {
 
 
 h1 {
-  font-size: 5rem;
-  padding: 15px;
+  font-size: 4.8rem;
     
   @media screen and (max-width: 481px) {
     font-size: 3rem;
@@ -61,6 +68,86 @@ h1 {
     }
 }
 
+.h1--mod {
+  font-size: 2rem;
+    
+  @media screen and (max-width: 481px) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 35px;
+  }
+}
+
+form {
+  font-size: 3rem;
+  position: relative;
+  top: -5vh;
+    
+  @media screen and (max-width: 481px) {
+    font-size: 1.8rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 40px;
+  }
+}
+
+.myBtn {
+  font-family: $mainFont;
+  position: relative;
+  top: -15vh;
+  width: fit-content;
+  padding: 3vh 5vh;
+  font-size: 5rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color:$fontColor;
+  border: none;
+  border-radius: 15% / 40%;
+  box-shadow: 0 9px #7B0021;
+  
+  &:hover {background-color: rgb(204, 65, 83);}
+  
+  &:active {
+    background-color: rgb(177, 56, 72);
+    box-shadow: 0 5px #4e0015;
+    transform: translateY(4px);
+  }
+
+  @media screen and (max-width: 481px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 80px;
+  }
+
+}
+
+.myBtn--mod {
+  margin-top: 10vh;
+  position: static;
+  font-size: 1.6rem;
+  width: auto;
+  height: auto;
+
+  @media screen and (max-width: 481px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 30px;
+  }
+
+}
+
+
+// <Modal>
 
 /* The Modal (background) */
 .modal {
@@ -106,13 +193,14 @@ body, html {
   text-align: center;
 }
 
-body {
-  background-color: chocolate;
-}
+// </Modal>
+
+
+// <Loader> 
 
 .loader-wraper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -175,6 +263,9 @@ body {
   }
 }
 
+// </Loader>
+
 form span {
   display: block;
 }
+
