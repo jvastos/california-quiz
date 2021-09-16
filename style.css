@@ -113,8 +113,6 @@ form {
 
 .myBtn {
   font-family: "Righteous", sans-serif;
-  position: relative;
-  top: -15vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
