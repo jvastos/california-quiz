@@ -77,6 +77,9 @@ function getNewQuestion() {
     };
 })};
 
+/*function formatInput() {
+    if (document.getElementById("question-input").getAttribute('type') = "checkbox")
+}*/
 
 
 
