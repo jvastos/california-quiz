@@ -55,7 +55,7 @@ function getNewQuestion() {
     fetch("../questions.json")
     .then((response) => response.json())
     .then((data) => {
-        if (questionsAlreadyDone.length > 5) {
+        if (questionsAlreadyDone.length > 4) {
             modal.style.display = "block";
         } else {
         let randomQuestionIndex = Math.floor(Math.random() * data.length);
@@ -69,21 +69,16 @@ function getNewQuestion() {
         questionsAlreadyDone.push(randomQuestionIndex);
         console.log(questionsAlreadyDone);
     };
-    if (questionsAlreadyDone.length > 5) {
+
+    formatInput();
+
+    if (questionsAlreadyDone.length > 4) {
         document.getElementById("question-title").innerHTML = "Rad!";
         document.getElementById("question-title").style.fontSize = "5rem";
         document.getElementById("question-input").innerHTML = "";
         document.getElementById("myBtn").innerHTML = "Finish";
     };
 })};
-
-/*function formatInput() {
-    if (document.getElementById("question-input").getAttribute('type') = "checkbox")
-}*/
-
-
-
-
 
 /*function getQuestion() {
     fetch("../questions.json")

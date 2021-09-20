@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
 body {
   color: #ff5067;
   background-image: url("70s.gif");
@@ -41,10 +46,9 @@ body .hide-scroll-chrome::-webkit-scrollbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  text-align: center;
-  padding: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 1.1rem;
   overflow-x: hidden;
   -ms-overflow-style: none;
@@ -79,6 +83,8 @@ h1 {
 
 .h1--mod {
   font-size: 2rem;
+  position: relative;
+  top: -8vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -95,6 +101,16 @@ h1 {
 
 form {
   font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   top: -5vh;
 }
@@ -109,6 +125,20 @@ form {
   form {
     font-size: 50px;
   }
+}
+
+h2 {
+  position: relative;
+  top: -13vh;
+}
+
+#question-input {
+  text-align: left;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .myBtn {
@@ -126,8 +156,13 @@ form {
   background-color: #ff5067;
   border: none;
   border-radius: 15% / 40%;
-  -webkit-box-shadow: 0 9px #7B0021;
-          box-shadow: 0 9px #7B0021;
+  -webkit-box-shadow: 0 9px #7b0021;
+          box-shadow: 0 9px #7b0021;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  top: -15vh;
 }
 
 .myBtn:hover {
@@ -155,11 +190,9 @@ form {
 }
 
 .myBtn--mod {
-  margin-top: 10vh;
-  position: static;
   font-size: 1.6rem;
-  width: auto;
-  height: auto;
+  position: relative;
+  top: 5vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -325,5 +358,147 @@ body, html {
 
 form span {
   display: block;
+  white-space: nowrap;
+}
+
+.checkbox--mod {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox--mod:active, .checkbox--mod:checked:active {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox--mod:checked {
+  background-color: #e9ecee;
+  border: 1px solid #7B0021;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #ff5067;
+}
+
+.checkbox--mod:checked:after {
+  content: '\2714';
+  font-size: 16px;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  color: #ff5067;
+}
+
+.big-checkbox--mod {
+  padding: 18px;
+}
+
+.big-checkbox--mod:checked:after {
+  font-size: 28px;
+  left: 6px;
+}
+
+.radio--mod {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.radio--mod:checked:after {
+  content: ' ';
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  position: absolute;
+  top: 3px;
+  background: #ff5067;
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px;
+  left: 3px;
+  font-size: 32px;
+}
+
+.radio--mod:checked {
+  background-color: #e9ecee;
+  color: #ff5067;
+  border: 1px solid #7b0021;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.radio--mod:active, .radio--mod:checked:active {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.big-radio--mod {
+  padding: 16px;
+}
+
+.big-radio--mod:checked:after {
+  width: 24px;
+  height: 24px;
+  left: 4px;
+  top: 4px;
+}
+
+textarea {
+  outline-color: #ff5067;
+  resize: none;
+  color: #ff5067;
+  font-size: 2rem;
+  font-family: "Righteous", sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+select {
+  outline-color: #ff5067;
+  color: #ff5067;
+  text-align: center;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  background-color: #F07575;
+  /* Fallback color if gradients are not supported */
+  /* For Chrome and Safari */
+  /* For old Firefox (3.6 to 15) */
+  /* For pre-releases of Internet Explorer  10*/
+  /* For old Opera (11.1 to 12.0) */
+  background-image: url(../images/select-arrow.png), -webkit-gradient(linear, left top, left bottom, from(#E5E5E5), to(#F4F4F4));
+  background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4);
+  /* Standard syntax; must be last */
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #ff5067;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #ff5067;
+  font-size: 2rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Righteous", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

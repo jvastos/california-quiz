@@ -1,10 +1,10 @@
 [
     {
     "label":"All the leaves are...",
-    "input":"<input type='radio' id='brown' name='leavesColor' value='brown'>\n<label for='brown'>Brown</label>\n<input type='radio' id='yellow' name='leavesColor' value='yellow'>\n<label for='yellow'>Yellow</label>\n<input type='radio' id='red' name='leavesColor' value='red'>\n<label for='red'>Red</label>"
+    "input":"<span>\n<input class='radio--mod' type='radio' id='brown' name='leavesColor' value='brown'>\n<label for='brown'>Brown</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='yellow' name='leavesColor' value='yellow'>\n<label for='yellow'>Yellow</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='red' name='leavesColor' value='red'>\n<label for='red'>Red</label>\n</span>"
     },
     {
-    "label":"the sky is...",
+    "label":"The sky is...",
     "input":"<textarea id='theSky' name='theSky' rows='1' placeholder='(rhymes with L.A.)'></textarea>"
     },
     {
@@ -13,15 +13,15 @@
     },
     {
     "label":"How would you be if you were in L.A.?",
-    "input":"<input type='checkbox' id='safe' name='safe' value='safe'>\n<label for='safe'>Safe</label>\n<input type='checkbox' id='high' name='high' value='high'>\n<label for='high'>High</label>\n<input type='checkbox' id='warm' name='warm' value='warm'>\n<label for='warm'>Warm</label>\n<input type='checkbox' id='broke' name='broke' value='broke'>\n<label for='broke'>Broke</label>"
+    "input":"<span>\n<input class='checkbox--mod' type='checkbox' id='safe' name='safe' value='safe'>\n<label for='safe'>Safe</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='high' name='high' value='high'>\n<label for='high'>High</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='warm' name='warm' value='warm'>\n<label for='warm'>Warm</label>\n</span>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='broke' name='broke' value='broke'>\n<label for='broke'>Broke</label>\n</span>"
     },
     {
-    "label":"You see a church...",
-    "input":"<span>\n<input type='checkbox' id='stop' name='stop' value='stop'>\n&nbsp;\n<label for='stop'>I&nbsp;stop</label>\n</span>\n<span>\n<input type='checkbox' id='sign' name='sign' value='sign'>&nbsp;\n<label for='sign'>I&nbsp;make&nbsp;the&nbsp;sign&nbsp;of&nbsp;the&nbsp;cross</label>\n</span>\n<span>\n<input type='checkbox' id='knees' name='knees' value='knees'>\n&nbsp;\n<label for='knees'>I&nbsp;get&nbsp;down&nbsp;on&nbsp;my&nbsp;knees</label>\n</span>\n<span>\n<input type='checkbox' id='pray' name='pray' value='pray'>\n&nbsp;\n<label for='pray'>I&nbsp;pretend&nbsp;to&nbsp;pray</label>\n</span>\n<span>\n<input type='checkbox' id='afraid' name='afraid' value='afraid'>\n&nbsp;\n<label for='afraid'>I&nbsp;cross&nbsp;the&nbsp;road&nbsp;afraid</label>\n</span>"
+    "label":"I see a church. I...",
+    "input":"<span>\n<input class='checkbox--mod' type='checkbox' id='stop' name='stop' value='stop'>\n \n<label for='stop'>Stop</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='knees' name='knees' value='knees'>\n \n<label for='knees'>Get down on my knees</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='pray' name='pray' value='pray'>\n \n<label for='pray'>Pretend to pray</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='afraid' name='afraid' value='afraid'>\n \n<label for='afraid'>Cross the road afraid</label>\n</span>"
     },
     {
-    "label":"What does the preacher like?",
-    "input":"<input type='radio' id='cold' name='preachersPreference' value='cold'>\n<label for='cold'>The Cold</label>\n<input type='radio' id='old' name='preachersPreference' value='old'>\n<label for='old'>The Old</label>\n<input type='radio' id='bold' name='preachersPreference' value='bold'>\n<label for='bold'>The bold</label>\n<input type='radio' id='bald' name='preachersPreference' value='bald'>\n<label for='bald'>The bald</label>"
+    "label":"The preacher likes...",
+    "input":"<span>\n<input class='radio--mod' type='radio' id='cold' name='preachersPreference' value='cold'>\n<label for='cold'>The Cold</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='old' name='preachersPreference' value='old'>\n<label for='old'>The Old</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='bold' name='preachersPreference' value='bold'>\n<label for='bold'>The bold</label>\n<span>\n</span>\n<input class='radio--mod' type='radio' id='bald' name='preachersPreference' value='bald'>\n<label for='bald'>The bald</label>\n</span>"
     },
     {
     "label":"The preacher knows I'm gonna...",
@@ -29,14 +29,14 @@
     },
     {
     "label":"I'm gonna stay",
-    "input":"<input type='checkbox' id='dreamin' name='dreamin' value='dreamin'>\n<label for='dreamin'>dreamin</label>\n<br>\n<input type='checkbox' id='dreamin2' name='dreamin2' value='dreamin'>\n<label for='dreamin2'>dreamin</label>\n<br>\n<input type='checkbox' id='dreamin3' name='dreamin3' value='dreamin'>\n<label for='dreamin3'>dreamin</label>"
+    "input":"<span>\n<input class='checkbox--mod' type='checkbox' id='dreamin' name='dreamin' value='dreamin'>\n<label for='dreamin'>Dreamin</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='dreamin2' name='dreamin2' value='dreamin'>\n<label for='dreamin2'>Dreamin</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='dreamin3' name='dreamin3' value='dreamin'>\n<label for='dreamin3'>Dreamin</label>\n</span>"
     },
     {
-    "label":"dreaming about where?",
+    "label":"Dreaming about where?",
     "input":"<textarea id='california' name='california' rows='1' placeholder='(a bear in a flag?!)'></textarea>"
     },
     {
     "label":"What season is it?",
-    "input":"<input type='radio' id='winter' name='season' value='winter'>\n<label for='winter'>Winter</label>\n<input type='radio' id='summer' name='season' value='summer'>\n<label for='summer'>Summer</label>\n<input type='radio' id='fall' name='season' value='fall'>\n<label for='fall'>Fall</label>\n<input type='radio' id='spring' name='season' value='spring'>\n<label for='spring'>Spring</label>"
+    "input":"<span>\n<input class='radio--mod' type='radio' id='winter' name='season' value='winter'>\n<label for='winter'>Winter</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='summer' name='season' value='summer'>\n<label for='summer'>Summer</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='fall' name='season' value='fall'>\n<label for='fall'>Fall</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='spring' name='season' value='spring'>\n<label for='spring'>Spring</label>\n</span>"
     }
 ]

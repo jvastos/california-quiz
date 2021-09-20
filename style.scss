@@ -1,5 +1,10 @@
 $fontColor: rgb(255, 80, 103);
+$darkerFontColor: rgb(123, 0, 33);
 $mainFont: 'Righteous', sans-serif;
+
+* {
+  box-sizing: content-box;
+}
 
 body {
     color: $fontColor;
@@ -33,12 +38,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15% / 40%;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   
-  text-align: center;
-  padding: 10px;
+  
+  
   font-size:  1.1rem;
   overflow-x: hidden; //hide horizontal scroll-bar
 
@@ -69,7 +75,9 @@ h1 {
 
 .h1--mod {
   font-size: 2rem;
-    
+  position: relative;
+  top: -8vh;
+
   @media screen and (max-width: 500px) {
     display: none;
   }
@@ -81,9 +89,12 @@ h1 {
 
 form {
   font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   top: -5vh;
-    
+
   @media screen and (max-width: 500px) {
     font-size: 1.8rem;
   }
@@ -92,6 +103,21 @@ form {
     font-size: 50px;
   }
 }
+
+h2 {
+  position: relative;
+  top: -13vh;
+}
+
+#question-input {
+  text-align: left;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 
 .myBtn {
   font-family: $mainFont;
@@ -106,8 +132,11 @@ form {
   background-color:$fontColor;
   border: none;
   border-radius: 15% / 40%;
-  box-shadow: 0 9px #7B0021;
-  
+  box-shadow: 0 9px $darkerFontColor;
+  align-self: center;
+  position: relative;
+  top: -15vh;
+
   &:hover {background-color: rgb(204, 65, 83);}
   
   &:active {
@@ -127,11 +156,10 @@ form {
 }
 
 .myBtn--mod {
-  margin-top: 10vh;
-  position: static;
+  
   font-size: 1.6rem;
-  width: auto;
-  height: auto;
+  position: relative;
+  top: 5vh;
 
   @media screen and (max-width: 500px) {
     font-size: 1.5rem;
@@ -264,5 +292,145 @@ body, html {
 
 form span {
   display: block;
+  white-space: nowrap;
+}
+
+// Checkbox modifier
+.checkbox--mod {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+
+  &:active, &:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  &:checked {
+    background-color: #e9ecee;
+    border: 1px solid #7B0021;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: $fontColor;
+  }
+
+  &:checked:after {
+    content: '\2714';
+    font-size: 16px;
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    color: $fontColor;
+  }
+
+}
+
+.big-checkbox--mod {
+	padding: 18px;
+  
+  &:checked:after {
+    font-size: 28px;
+    left: 6px;
+  }
+}
+
+//Radio modifier
+.radio--mod {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+
+  &:checked:after {
+    content: ' ';
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    background: $fontColor;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+    text-shadow: 0px;
+    left: 3px;
+    font-size: 32px;
+  }
+
+  &:checked {
+    background-color: #e9ecee;
+    color: $fontColor;
+    border: 1px solid $darkerFontColor;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+  }
+
+  &:active, &:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  }
+
+}
+
+.big-radio--mod {
+	padding: 16px;
+
+  &:checked:after {
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 4px;
+  }
+
+}
+
+// Textarea modifier
+
+textarea {
+  outline-color: $fontColor;
+  resize: none;
+  color: $fontColor;
+  font-size: 2rem;
+  font-family: $mainFont;
+  text-align: center;
+  padding: 20px;
+}
+
+// Dropdown modifier
+
+select {
+  outline-color: $fontColor;
+  color: $fontColor;
+  text-align: center;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  background-color: #F07575; /* Fallback color if gradients are not supported */
+  background-image: url(../images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
+  background-image: url(../images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Firefox (3.6 to 15) */
+  background-image: url(../images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of Internet Explorer  10*/
+  background-image: url(../images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */
+  background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid $fontColor;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  color: $fontColor;
+  font-size: 2rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: $mainFont;
 }
 
