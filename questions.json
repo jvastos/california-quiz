@@ -25,7 +25,7 @@
     },
     {
     "label":"The preacher knows I'm gonna...",
-    "input":"<textarea id='thePreacherKnows' name='thePreacherKnows' rows='1' placeholder='(not go anywhere)'></textarea>"
+    "input":"<textarea id='thePreacherKnows' name='thePreacherKnows' rows='1' placeholder='(go nowhere else)'></textarea>"
     },
     {
     "label":"I'm gonna stay",

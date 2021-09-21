@@ -196,19 +196,31 @@ h2 {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  font-size: 5rem;
+  border-radius: 10% / 30%;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+  //background-color: red;
+  color: grey;
+  font-size: 2.5rem;
   font-weight: bold;
+  display: block;
+  width: fit-content;
+  position: relative;
+  left: 100%;
+  transform: translateY(-60%);
+
+  @media screen and (max-width: 500px) {
+    left: 90%;
+    transform: translateY(-20%);
+  }
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: $fontColor;
   text-decoration: none;
   cursor: pointer;
 }
@@ -295,26 +307,30 @@ form span {
   white-space: nowrap;
 }
 
+input, label {
+  cursor: pointer;
+}
+
 // Checkbox modifier
-.checkbox--mod {
+input[type='checkbox'] {
 	-webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
+  -moz-appearance: none;
+
+	border: 3px solid $fontColor;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 9px;
 	border-radius: 3px;
 	display: inline-block;
 	position: relative;
+  transition: transform 0.2s ease;
 
   &:active, &:checked:active {
     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
   }
   
   &:checked {
-    background-color: #e9ecee;
-    border: 1px solid #7B0021;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-    color: $fontColor;
+    border: 3px solid $fontColor;
+    color: white;
   }
 
   &:checked:after {
@@ -323,7 +339,11 @@ form span {
     position: absolute;
     top: 0px;
     left: 2px;
-    color: $fontColor;
+    color: white;
+  }
+
+  &:hover {
+    transform: scale(1.2);
   }
 
 }
@@ -338,15 +358,17 @@ form span {
 }
 
 //Radio modifier
-.radio--mod {
+input[type='radio'] {
 	-webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
+  -moz-appearance: none;
+	
+	border: 3px solid $fontColor;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 9px;
 	border-radius: 50px;
 	display: inline-block;
 	position: relative;
+  transition: transform 0.2s ease;
 
   &:checked:after {
     content: ' ';
@@ -355,22 +377,23 @@ form span {
     border-radius: 50px;
     position: absolute;
     top: 3px;
-    background: $fontColor;
-    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+    background: white;
     text-shadow: 0px;
     left: 3px;
     font-size: 32px;
   }
 
   &:checked {
-    background-color: #e9ecee;
-    color: $fontColor;
-    border: 1px solid $darkerFontColor;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+    color: white;
+    
   }
 
   &:active, &:checked:active {
     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  }
+
+  &:hover {
+    transform: scale(1.2);
   }
 
 }
@@ -390,41 +413,59 @@ form span {
 // Textarea modifier
 
 textarea {
-  outline-color: $fontColor;
+  background-color: transparent;
   resize: none;
-  color: $fontColor;
+  color: white;
   font-size: 2rem;
   font-family: $mainFont;
   text-align: center;
   padding: 20px;
+  border: 5px solid $fontColor;
+  border-radius: 10% / 30%;
+  transition: transform, background-color 0.2s ease;
+  overflow: hidden;
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgrey;
+    opacity: 1; /* Firefox */
+  }
+  
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgrey;
+  }
+  
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgrey;
+  }
+
+  &:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.07);
+  }
+  
 }
 
 // Dropdown modifier
 
 select {
   outline-color: $fontColor;
-  color: $fontColor;
+  color: white;
   text-align: center;
-  -webkit-appearance: button;
-  -moz-appearance: button;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-padding-end: 20px;
   -moz-padding-end: 20px;
   -webkit-padding-start: 2px;
   -moz-padding-start: 2px;
-  background-color: #F07575; /* Fallback color if gradients are not supported */
-  background-image: url(../images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
-  background-image: url(../images/select-arrow.png), -moz-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Firefox (3.6 to 15) */
-  background-image: url(../images/select-arrow.png), -ms-linear-gradient(top, #E5E5E5, #F4F4F4); /* For pre-releases of Internet Explorer  10*/
-  background-image: url(../images/select-arrow.png), -o-linear-gradient(top, #E5E5E5, #F4F4F4); /* For old Opera (11.1 to 12.0) */
-  background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4); /* Standard syntax; must be last */
+  background-color: transparent; /* Fallback color if gradients are not supported */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(255, 80, 103)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-position: center right;
   background-repeat: no-repeat;
-  border: 1px solid $fontColor;
-  border-radius: 3px;
+  border: 5px solid $fontColor;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  color: $fontColor;
   font-size: 2rem;
   margin: 0;
   overflow: hidden;
@@ -432,5 +473,16 @@ select {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: $mainFont;
+  border-radius: 35px;
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.07);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 

@@ -238,19 +238,36 @@ h2 {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  font-size: 5rem;
+  border-radius: 10% / 30%;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+  color: grey;
+  font-size: 2.5rem;
   font-weight: bold;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  left: 100%;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+}
+
+@media screen and (max-width: 500px) {
+  .close {
+    left: 90%;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #ff5067;
   text-decoration: none;
   cursor: pointer;
 }
@@ -361,38 +378,48 @@ form span {
   white-space: nowrap;
 }
 
-.checkbox--mod {
+input, label {
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
   -webkit-appearance: none;
-  background-color: #fafafa;
-  border: 1px solid #cacece;
+  -moz-appearance: none;
+  border: 3px solid #ff5067;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   padding: 9px;
   border-radius: 3px;
   display: inline-block;
   position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-.checkbox--mod:active, .checkbox--mod:checked:active {
+input[type='checkbox']:active, input[type='checkbox']:checked:active {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.checkbox--mod:checked {
-  background-color: #e9ecee;
-  border: 1px solid #7B0021;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-  color: #ff5067;
+input[type='checkbox']:checked {
+  border: 3px solid #ff5067;
+  color: white;
 }
 
-.checkbox--mod:checked:after {
+input[type='checkbox']:checked:after {
   content: '\2714';
   font-size: 16px;
   position: absolute;
   top: 0px;
   left: 2px;
-  color: #ff5067;
+  color: white;
+}
+
+input[type='checkbox']:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .big-checkbox--mod {
@@ -404,44 +431,47 @@ form span {
   left: 6px;
 }
 
-.radio--mod {
+input[type='radio'] {
   -webkit-appearance: none;
-  background-color: #fafafa;
-  border: 1px solid #cacece;
+  -moz-appearance: none;
+  border: 3px solid #ff5067;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   padding: 9px;
   border-radius: 50px;
   display: inline-block;
   position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-.radio--mod:checked:after {
+input[type='radio']:checked:after {
   content: ' ';
   width: 12px;
   height: 12px;
   border-radius: 50px;
   position: absolute;
   top: 3px;
-  background: #ff5067;
-  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background: white;
   text-shadow: 0px;
   left: 3px;
   font-size: 32px;
 }
 
-.radio--mod:checked {
-  background-color: #e9ecee;
-  color: #ff5067;
-  border: 1px solid #7b0021;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+input[type='radio']:checked {
+  color: white;
 }
 
-.radio--mod:active, .radio--mod:checked:active {
+input[type='radio']:active, input[type='radio']:checked:active {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type='radio']:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .big-radio--mod {
@@ -456,43 +486,87 @@ form span {
 }
 
 textarea {
-  outline-color: #ff5067;
+  background-color: transparent;
   resize: none;
-  color: #ff5067;
+  color: white;
   font-size: 2rem;
   font-family: "Righteous", sans-serif;
   text-align: center;
   padding: 20px;
+  border: 5px solid #ff5067;
+  border-radius: 10% / 30%;
+  -webkit-transition: background-color 0.2s ease, -webkit-transform;
+  transition: background-color 0.2s ease, -webkit-transform;
+  transition: transform, background-color 0.2s ease;
+  transition: transform, background-color 0.2s ease, -webkit-transform;
+  overflow: hidden;
+}
+
+textarea::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgrey;
+  opacity: 1;
+  /* Firefox */
+}
+
+textarea:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgrey;
+  opacity: 1;
+  /* Firefox */
+}
+
+textarea::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgrey;
+  opacity: 1;
+  /* Firefox */
+}
+
+textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgrey;
+  opacity: 1;
+  /* Firefox */
+}
+
+textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: lightgrey;
+}
+
+textarea::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: lightgrey;
+}
+
+textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 select {
   outline-color: #ff5067;
-  color: #ff5067;
+  color: white;
   text-align: center;
-  -webkit-appearance: button;
-  -moz-appearance: button;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-padding-end: 20px;
   -moz-padding-end: 20px;
   -webkit-padding-start: 2px;
   -moz-padding-start: 2px;
-  background-color: #F07575;
+  background-color: transparent;
   /* Fallback color if gradients are not supported */
-  /* For Chrome and Safari */
-  /* For old Firefox (3.6 to 15) */
-  /* For pre-releases of Internet Explorer  10*/
-  /* For old Opera (11.1 to 12.0) */
-  background-image: url(../images/select-arrow.png), -webkit-gradient(linear, left top, left bottom, from(#E5E5E5), to(#F4F4F4));
-  background-image: url(../images/select-arrow.png), linear-gradient(to bottom, #E5E5E5, #F4F4F4);
-  /* Standard syntax; must be last */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(255, 80, 103)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-position: center right;
   background-repeat: no-repeat;
-  border: 1px solid #ff5067;
-  border-radius: 3px;
+  border: 5px solid #ff5067;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  color: #ff5067;
   font-size: 2rem;
   margin: 0;
   overflow: hidden;
@@ -500,5 +574,17 @@ select {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: "Righteous", sans-serif;
+  border-radius: 35px;
+}
+
+select:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+select:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
