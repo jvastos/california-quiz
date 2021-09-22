@@ -359,8 +359,7 @@ input[type='checkbox'] {
 
 //Radio modifier
 input[type='radio'] {
-	-webkit-appearance: none;
-  -moz-appearance: none;
+
 	
 	border: 3px solid $fontColor;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
