@@ -1,7 +1,7 @@
 [
     {
     "label":"All the leaves are...",
-    "input":"<label class='container' for='brown'>Brown\n<input type='radio' checked='checked' name='radio' id='brown' name='leavesColor' value='brown'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='yellow'>Yellow\n<input type='radio' checked='checked' name='radio' id='yellow' name='leavesColor' value='yellow'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='red'>Red\n<input type='radio' checked='checked' name='radio' id='red' name='leavesColor' value='red'>\n<span class='checkmark'></span>\n</label>"
+    "input":"<label class='container' for='brown'>Brown\n<input type='radio'  name='radio' id='brown' name='leavesColor' value='brown'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='yellow'>Yellow\n<input type='radio'  name='radio' id='yellow' name='leavesColor' value='yellow'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='red'>Red\n<input type='radio'  name='radio' id='red' name='leavesColor' value='red'>\n<span class='checkmark'></span>\n</label>"
     },
     {
     "label":"The sky is...",
@@ -13,15 +13,15 @@
     },
     {
     "label":"How would you be if you were in L.A.?",
-    "input":"<span>\n<input class='checkbox--mod' type='checkbox' id='safe' name='safe' value='safe'>\n<label for='safe'>Safe</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='high' name='high' value='high'>\n<label for='high'>High</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='warm' name='warm' value='warm'>\n<label for='warm'>Warm</label>\n</span>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='broke' name='broke' value='broke'>\n<label for='broke'>Broke</label>\n</span>"
+    "input":"<label class='container-checkbox' for='safe'>Safe\n<input type='checkbox'  name='checkbox' id='safe' name='ifInLA' value='safe'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='high'>High\n<input type='checkbox'  name='checkbox' id='high' name='ifInLA' value='high'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='warm'>Warm\n<input type='checkbox'  name='checkbox' id='warm' name='ifInLA' value='warm'>\n<span class='checkmark-checkbox'></span>\n</label><label class='container-checkbox' for='broke'>Broke\n<input type='checkbox'  name='checkbox' id='broke' name='ifInLA' value='broke'>\n<span class='checkmark-checkbox'></span>\n</label>"
     },
     {
     "label":"I see a church. I...",
-    "input":"<span>\n<input class='checkbox--mod' type='checkbox' id='stop' name='stop' value='stop'>\n \n<label for='stop'>Stop</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='knees' name='knees' value='knees'>\n \n<label for='knees'>Get down on my knees</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='pray' name='pray' value='pray'>\n \n<label for='pray'>Pretend to pray</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='afraid' name='afraid' value='afraid'>\n \n<label for='afraid'>Cross the road afraid</label>\n</span>"
+    "input":"<label class='container-checkbox' for='stop'>Stop\n<input type='checkbox'  name='checkbox' id='stop' name='seeChurch' value='stop'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='knees'>Get down on my knees\n<input type='checkbox'  name='checkbox' id='knees' name='seeChurch' value='knees'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='pretend'>Pretend to pray\n<input type='checkbox'  name='checkbox' id='pretend' name='seeChurch' value='pretend'>\n<span class='checkmark-checkbox'></span>\n</label><label class='container-checkbox' for='run'>Run afraid\n<input type='checkbox'  name='checkbox' id='run' name='seeChurch' value='run'>\n<span class='checkmark-checkbox'></span>\n</label>"
     },
     {
     "label":"The preacher likes...",
-    "input":"<span>\n<input class='radio--mod' type='radio' id='cold' name='preachersPreference' value='cold'>\n<label for='cold'>The Cold</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='old' name='preachersPreference' value='old'>\n<label for='old'>The Old</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='bold' name='preachersPreference' value='bold'>\n<label for='bold'>The bold</label>\n<span>\n</span>\n<input class='radio--mod' type='radio' id='bald' name='preachersPreference' value='bald'>\n<label for='bald'>The bald</label>\n</span>"
+    "input":"<label class='container' for='cold'>The Cold\n<input type='radio'  name='radio' id='cold' name='preacherLikes' value='cold'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='old'>The Old\n<input type='radio'  name='radio' id='old' name='preacherLikes' value='old'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='bold'>The Bold\n<input type='radio'  name='radio' id='bold' name='preacherLikes' value='bold'>\n<span class='checkmark'></span>\n</label><label class='container' for='bald'>The Bald\n<input type='radio'  name='radio' id='bald' name='preacherLikes' value='bald'>\n<span class='checkmark'></span>\n</label>"
     },
     {
     "label":"The preacher knows I'm gonna...",
@@ -29,7 +29,7 @@
     },
     {
     "label":"I'm gonna stay",
-    "input":"<span>\n<input class='checkbox--mod' type='checkbox' id='dreamin' name='dreamin' value='dreamin'>\n<label for='dreamin'>Dreamin</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='dreamin2' name='dreamin2' value='dreamin'>\n<label for='dreamin2'>Dreamin</label>\n</span>\n<span>\n<input class='checkbox--mod' type='checkbox' id='dreamin3' name='dreamin3' value='dreamin'>\n<label for='dreamin3'>Dreamin</label>\n</span>"
+    "input":"<label class='container-checkbox' for='dreamin1'>Dreamin\n<input type='checkbox' name='checkbox' id='dreamin1' name='gonnaStay' value='dreamin1'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='dreamin2'>Dreamin\n<input type='checkbox' name='checkbox' id='dreamin2' name='gonnaStay' value='dreamin2'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='dreamin3'>Dreamin\n<input type='checkbox' name='checkbox' id='dreamin3' name='gonnaStay' value='dreamin3'>\n<span class='checkmark-checkbox'></span>\n</label>"
     },
     {
     "label":"Dreaming about where?",
@@ -37,6 +37,6 @@
     },
     {
     "label":"What season is it?",
-    "input":"<span>\n<input class='radio--mod' type='radio' id='winter' name='season' value='winter'>\n<label for='winter'>Winter</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='summer' name='season' value='summer'>\n<label for='summer'>Summer</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='fall' name='season' value='fall'>\n<label for='fall'>Fall</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='spring' name='season' value='spring'>\n<label for='spring'>Spring</label>\n</span>"
+    "input":"<label class='container' for='winter'>Winter\n<input type='radio'  name='radio' id='winter' name='season' value='winter'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='summer'>Summer\n<input type='radio'  name='radio' id='summer' name='season' value='summer'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='fall'>Fall\n<input type='radio'  name='radio' id='fall' name='season' value='fall'>\n<span class='checkmark'></span>\n</label><label class='container' for='spring'>Spring\n<input type='radio'  name='radio' id='spring' name='season' value='spring'>\n<span class='checkmark'></span>\n</label>"
     }
 ]
