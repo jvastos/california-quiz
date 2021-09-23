@@ -1,7 +1,7 @@
 [
     {
     "label":"All the leaves are...",
-    "input":"<span>\n<input class='radio--mod' type='radio' id='brown' name='leavesColor' value='brown'>\n<label for='brown'>Brown</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='yellow' name='leavesColor' value='yellow'>\n<label for='yellow'>Yellow</label>\n</span>\n<span>\n<input class='radio--mod' type='radio' id='red' name='leavesColor' value='red'>\n<label for='red'>Red</label>\n</span>"
+    "input":"<label class='container' for='brown'>Brown\n<input type='radio' checked='checked' name='radio' id='brown' name='leavesColor' value='brown'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='yellow'>Yellow\n<input type='radio' checked='checked' name='radio' id='yellow' name='leavesColor' value='yellow'>\n<span class='checkmark'></span>\n</label>\n<label class='container' for='red'>Red\n<input type='radio' checked='checked' name='radio' id='red' name='leavesColor' value='red'>\n<span class='checkmark'></span>\n</label>"
     },
     {
     "label":"The sky is...",
