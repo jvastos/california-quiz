@@ -409,7 +409,6 @@ input, label {
   width: 26px;
   border: 3px solid #ff5067;
   border-radius: 8px;
-  font-size: 1.3rem;
 }
 
 /* On mouse-over, add a grey background color */
@@ -420,10 +419,9 @@ input, label {
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark-checkbox:after {
-  content: "\2714";
+  content: "";
   position: absolute;
   display: none;
-  color: white;
 }
 
 /* Show the checkmark when checked */
@@ -433,10 +431,14 @@ input, label {
 
 /* Style the checkmark/indicator */
 .container-checkbox .checkmark-checkbox:after {
-  left: 4px;
+  left: 8px;
   top: 0px;
-  width: 5px;
-  height: 10px;
+  width: 7px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* Customize the label (the container) */
