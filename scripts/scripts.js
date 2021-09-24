@@ -1,4 +1,4 @@
-//Loader
+//LOADER
 
 let loader = document.querySelector(".loader-wraper");
 
@@ -8,13 +8,13 @@ window.onload = function() {
 }
 
 
+
+// MODAL
+
 document.getElementById("myBtn").addEventListener("click", function submitBreak(event){
     event.preventDefault()
   });
 
-
-
-        
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -44,7 +44,7 @@ window.onclick = function(event) {
 
 
 
-// Function to get questions from the json file
+// GETTING A NEW QUESTION - JSON FETCHING
 
 let questionsAlreadyDone = [];
 
@@ -73,18 +73,36 @@ function getNewQuestion() {
     if (questionsAlreadyDone.length > 4) {
         document.getElementById("myBtn").innerHTML = "Finish";
     };
+
 })};
 
-/*function getQuestion() {
-    fetch("../questions.json")
-    .then((response) => response.json())
-    .then((data) => {
-        let randomQuestionIndex = Math.floor(Math.random() * data.length);
-        let label = data[randomQuestionIndex].label;
-        let question = data[randomQuestionIndex].input;
-        document.getElementById("question-title").innerHTML = label;
-        document.getElementById("question-input").innerHTML = question;
-        questionsAlreadyDone.push(randomQuestionIndex);
-        console.log(questionsAlreadyDone);
-    })
-}; */
+// PRESSING ENTER TO PRESS BUTTON
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        getNewQuestion();
+    }
+});
+
+//TOGGLE BACKGROUND
+
+function toggleBg() {
+    let switchButton = document.getElementById("switch-button");
+
+    if (switchButton.checked) {
+        document.getElementById("main-container").classList.toggle("background-image");
+    }
+}
+
+
+
+
+/*function toggleBg() {
+    
+    let mainContainer = document.getElementById("main-container");
+    
+    if (!mainContainer.classList.contains("background-image")) {
+    document.getElementById("main-container").classList.add("background-image");
+} else if (mainContainer.classList.contains("background-image")) {
+    document.getElementById("main-container").classList.remove("background-image");
+}}*/

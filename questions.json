@@ -5,7 +5,7 @@
     },
     {
     "label":"The sky is...",
-    "input":"<textarea id='theSky' name='theSky' rows='1' placeholder='(rhymes with L.A.)'></textarea>"
+    "input":"<textarea id='theSky' type='textarea' name='theSky' rows='1' placeholder='(rhymes with L.A.)'></textarea>"
     },
     {
     "label":"What I have been doing today:",
@@ -25,7 +25,7 @@
     },
     {
     "label":"The preacher knows I'm gonna...",
-    "input":"<textarea id='thePreacherKnows' name='thePreacherKnows' rows='1' placeholder='(go nowhere else)'></textarea>"
+    "input":"<textarea id='thePreacherKnows' type='textarea' name='thePreacherKnows' rows='1' placeholder='(go nowhere else)'></textarea>"
     },
     {
     "label":"I'm gonna stay",
@@ -33,7 +33,7 @@
     },
     {
     "label":"Dreaming about where?",
-    "input":"<textarea id='california' name='california' rows='1' placeholder='(a bear in a flag?!)'></textarea>"
+    "input":"<textarea id='california' type='textarea' name='california' rows='1' placeholder='(a bear in a flag?!)'></textarea>"
     },
     {
     "label":"What season is it?",
