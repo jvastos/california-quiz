@@ -479,6 +479,10 @@ input, label {
 @media screen and (min-width: 1600px) {
   .container-checkbox .checkmark-checkbox:after {
     background-size: 70%;
+    left: 10px;
+    top: 1px;
+    width: 6px;
+    height: 17px;
   }
 }
 
