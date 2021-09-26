@@ -149,7 +149,7 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5vw;
+  padding: 0 5vw;
 }
 
 h2 {
