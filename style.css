@@ -457,14 +457,23 @@ input, label {
 
 /* Style the checkmark/indicator */
 .container-checkbox .checkmark-checkbox:after {
-  left: 9px;
+  left: 7px;
   top: 1px;
-  width: 7px;
-  height: 16px;
+  width: 4px;
+  height: 12px;
   border: solid white;
   border-width: 0 4px 4px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 500px) {
+  .container-checkbox .checkmark-checkbox:after {
+    left: 7px;
+    top: 1px;
+    width: 4px;
+    height: 11px;
+  }
 }
 
 @media screen and (min-width: 1600px) {
