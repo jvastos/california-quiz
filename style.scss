@@ -556,13 +556,28 @@ select {
 
 
 /* The switch - the box around the slider */
+
+//The text beside the switcher
+
+.switch-text {
+  display: inline;
+  background-color: $darkerFontColor;
+  position: relative;
+  left: calc(50% - 70px);
+  top: 4.3%;
+  border-radius: 34px;
+  font-size: 1rem;
+  color: white;
+  padding: 0px 10px 2px 10px;
+}
+
 .switch {
-  position: fixed;
-  top: 25px;
-  right: 25px;
   display: inline-block;
   width: 53px;
   height: 25px;
+  position: relative;
+  left: calc(50% - 70px);
+  top: 4%;
 }
 
 /* Hide default HTML checkbox */
