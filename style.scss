@@ -569,6 +569,13 @@ select {
   font-size: 1rem;
   color: white;
   padding: 0px 10px 2px 10px;
+
+  @media screen and (max-width: 500px) {
+    background-color: transparent;
+    left: calc(50% - 90px);
+    top: 4.7%;
+    opacity: 0.6;
+  }
 }
 
 .switch {
@@ -578,6 +585,14 @@ select {
   position: relative;
   left: calc(50% - 70px);
   top: 4%;
+
+  @media screen and (max-width: 500px) {
+    width: 70px;
+    height: 30px;
+    left: calc(50% - 90px);
+    opacity: 0.6;
+  }
+
 }
 
 /* Hide default HTML checkbox */
@@ -598,6 +613,12 @@ select {
   background-color: $darkerFontColor;
   -webkit-transition: .4s;
   transition: .4s;
+
+  @media screen and (max-width: 500px) {
+    background-color: transparent;
+    border: 3px solid $darkerFontColor
+  }
+
 }
 
 .slider:before {
