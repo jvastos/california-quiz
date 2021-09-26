@@ -8,7 +8,6 @@ window.onload = function() {
 }
 
 
-
 // MODAL
 
 document.getElementById("myBtn").addEventListener("click", function submitBreak(event){
@@ -40,8 +39,6 @@ window.onclick = function(event) {
     window.location.reload(false); 
     }
 }
-
-
 
 
 // GETTING A NEW QUESTION - JSON FETCHING
@@ -76,6 +73,7 @@ function getNewQuestion() {
 
 })};
 
+
 // PRESSING ENTER TO PRESS BUTTON
 
 document.addEventListener('keydown', (e) => {
@@ -84,6 +82,7 @@ document.addEventListener('keydown', (e) => {
         getNewQuestion();
     }
 });
+
 
 //TOGGLE BACKGROUND
 
