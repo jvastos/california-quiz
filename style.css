@@ -1,6 +1,7 @@
 * {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -40,6 +41,7 @@ body .hide-scroll-chrome::-webkit-scrollbar {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 15% / 40%;
+  padding: 0 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,6 +68,14 @@ body .hide-scroll-chrome::-webkit-scrollbar {
   display: none;
 }
 
+@media screen and (max-width: 500px) {
+  .main-container {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border-radius: 5% / 10%;
+  }
+}
+
 .background-image {
   background-image: none;
 }
@@ -88,8 +98,6 @@ h1 {
 
 .h1--mod {
   font-size: 2rem;
-  position: relative;
-  top: -8vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -116,8 +124,6 @@ form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
-  top: -5vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -132,18 +138,22 @@ form {
   }
 }
 
-h2 {
-  position: relative;
-  top: -13vh;
-}
-
 #question-input {
   text-align: left;
-  position: absolute;
-  top: 10vh;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5vw;
+}
+
+h2 {
+  margin-bottom: 5vh;
 }
 
 .myBtn {
@@ -166,8 +176,6 @@ h2 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  position: relative;
-  top: -15vh;
 }
 
 .myBtn:hover {
@@ -196,8 +204,6 @@ h2 {
 
 .myBtn--mod {
   font-size: 1.6rem;
-  position: relative;
-  top: 5vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -396,6 +402,13 @@ input, label {
   user-select: none;
 }
 
+@media screen and (min-width: 1600px) {
+  .container-checkbox {
+    font-size: 3rem;
+    padding-left: 55px;
+  }
+}
+
 /* Hide the browser's default checkbox */
 .container-checkbox input {
   position: absolute;
@@ -414,6 +427,14 @@ input, label {
   width: 26px;
   border: 3px solid #ff5067;
   border-radius: 8px;
+}
+
+@media screen and (min-width: 1600px) {
+  .checkmark-checkbox {
+    top: 13px;
+    height: 35px;
+    width: 35px;
+  }
 }
 
 /* On mouse-over, add a grey background color */
@@ -460,6 +481,13 @@ input, label {
   user-select: none;
 }
 
+@media screen and (min-width: 1600px) {
+  .container {
+    font-size: 3rem;
+    padding-left: 55px;
+  }
+}
+
 /* Hide the browser's default radio button */
 .container input {
   position: absolute;
@@ -478,6 +506,14 @@ input, label {
   width: 25px;
   border-radius: 50%;
   border: 3px solid #ff5067;
+}
+
+@media screen and (min-width: 1600px) {
+  .checkmark {
+    top: 13px;
+    height: 35px;
+    width: 35px;
+  }
 }
 
 /* On mouse-over, add a grey background color */
@@ -523,6 +559,16 @@ textarea {
   transition: transform, background-color 0.2s ease;
   transition: transform, background-color 0.2s ease, -webkit-transform;
   overflow: hidden;
+  max-width: 85%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 1600px) {
+  textarea {
+    font-size: 3rem;
+  }
 }
 
 textarea::-webkit-input-placeholder {
@@ -591,13 +637,22 @@ select {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   font-size: 2rem;
-  margin: 0;
   overflow: hidden;
   padding: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: "Righteous", sans-serif;
   border-radius: 35px;
+  width: 115%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media screen and (min-width: 1600px) {
+  select {
+    font-size: 3rem;
+  }
 }
 
 select:focus {

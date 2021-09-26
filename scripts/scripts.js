@@ -93,16 +93,3 @@ function toggleBg() {
         document.getElementById("main-container").classList.toggle("background-image");
     }
 }
-
-
-
-
-/*function toggleBg() {
-    
-    let mainContainer = document.getElementById("main-container");
-    
-    if (!mainContainer.classList.contains("background-image")) {
-    document.getElementById("main-container").classList.add("background-image");
-} else if (mainContainer.classList.contains("background-image")) {
-    document.getElementById("main-container").classList.remove("background-image");
-}}*/
