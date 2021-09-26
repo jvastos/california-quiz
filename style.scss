@@ -631,20 +631,36 @@ select {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+
+  @media screen and (max-width: 500px) {
+    height: 16px;
+    width: 16px;
+  }
+
 }
 
 input:checked + .slider {
   background-color: lightgrey;
+
+  @media screen and (max-width: 500px) {
+    background-color: transparent;
+    border: 3px solid lightgrey;
+  }
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px lightgrey;
-}
+
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+
+  @media screen and (max-width: 500px) {
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+
 }
 
 /* Rounded sliders */

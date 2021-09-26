@@ -745,18 +745,34 @@ select:hover {
   transition: .4s;
 }
 
+@media screen and (max-width: 500px) {
+  .slider:before {
+    height: 16px;
+    width: 16px;
+  }
+}
+
 input:checked + .slider {
   background-color: lightgrey;
 }
 
-input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px lightgrey;
-          box-shadow: 0 0 1px lightgrey;
+@media screen and (max-width: 500px) {
+  input:checked + .slider {
+    background-color: transparent;
+    border: 3px solid lightgrey;
+  }
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+@media screen and (max-width: 500px) {
+  input:checked + .slider:before {
+    -webkit-transform: translateX(40px);
+    transform: translateX(40px);
+  }
 }
 
 /* Rounded sliders */
