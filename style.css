@@ -666,7 +666,6 @@ select:hover {
   cursor: pointer;
 }
 
-/* The switch - the box around the slider */
 .switch-text {
   display: inline;
   background-color: #7b0021;
@@ -683,11 +682,12 @@ select:hover {
   .switch-text {
     background-color: transparent;
     left: calc(50% - 90px);
-    top: 4.7%;
+    top: 3.5%;
     opacity: 0.6;
   }
 }
 
+/* The switch - the box around the slider */
 .switch {
   display: inline-block;
   width: 53px;
@@ -703,6 +703,7 @@ select:hover {
     height: 30px;
     left: calc(50% - 90px);
     opacity: 0.6;
+    top: 2.5%;
   }
 }
 

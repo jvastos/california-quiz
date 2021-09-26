@@ -554,9 +554,6 @@ select {
 
 // BACKGROUNG SWITCHER
 
-
-/* The switch - the box around the slider */
-
 //The text beside the switcher
 
 .switch-text {
@@ -573,10 +570,12 @@ select {
   @media screen and (max-width: 500px) {
     background-color: transparent;
     left: calc(50% - 90px);
-    top: 4.7%;
+    top: 3.5%;
     opacity: 0.6;
   }
 }
+
+/* The switch - the box around the slider */
 
 .switch {
   display: inline-block;
@@ -591,6 +590,7 @@ select {
     height: 30px;
     left: calc(50% - 90px);
     opacity: 0.6;
+    top: 2.5%;
   }
 
 }
