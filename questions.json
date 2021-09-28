@@ -29,7 +29,7 @@
     },
     {
     "label":"I'm gonna stay",
-    "input":"<label class='container-checkbox' for='dreamin1'>Dreamin\n<input type='checkbox' name='checkbox' id='dreamin1' name='gonnaStay' value='dreamin1'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='dreamin2'>Dreamin\n<input type='checkbox' name='checkbox' id='dreamin2' name='gonnaStay' value='dreamin2'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='dreamin3'>Dreamin\n<input type='checkbox' name='checkbox' id='dreamin3' name='gonnaStay' value='dreamin3'>\n<span class='checkmark-checkbox'></span>\n</label>"
+    "input":"<label class='container-checkbox' for='dreamin1'>Dreamin\n<input type='checkbox' name='dreamin' id='dreamin1' name='gonnaStay' value='dreamin1'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='dreamin2'>Dreamin\n<input type='checkbox' name='dreamin' id='dreamin2' name='gonnaStay' value='dreamin2'>\n<span class='checkmark-checkbox'></span>\n</label>\n<label class='container-checkbox' for='dreamin3'>Dreamin\n<input type='checkbox' name='dreamin' id='dreamin3' name='gonnaStay' value='dreamin3'>\n<span class='checkmark-checkbox'></span>\n</label>"
     },
     {
     "label":"Dreaming about where?",

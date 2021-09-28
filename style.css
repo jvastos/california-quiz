@@ -182,6 +182,10 @@ h2 {
   background-color: #cc4153;
 }
 
+.myBtn:focus {
+  border: 2px solid white;
+}
+
 .myBtn:active {
   background-color: #b13848;
   -webkit-box-shadow: 0 5px #4e0015;

@@ -144,6 +144,10 @@ h2 {
   
 
   &:hover {background-color: rgb(204, 65, 83);}
+
+  &:focus {
+    border: 2px solid white;
+  }
   
   &:active {
     background-color: rgb(177, 56, 72);
@@ -339,6 +343,7 @@ input, label {
   cursor: pointer;
   height: 0;
   width: 0;
+
 }
 
 /* Create a custom checkbox */
@@ -593,6 +598,7 @@ select {
   color: white;
   padding: 0px 10px 2px 10px;
 
+
   @media screen and (max-width: 500px) {
     background-color: transparent;
     left: calc(50% - 90px);
@@ -695,5 +701,5 @@ input:checked + .slider:before {
 }
 
 .slider.round:before {
-  border-radius: 50%;
+  border-radius: 50%;  
 }
