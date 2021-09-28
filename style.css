@@ -270,10 +270,12 @@ h2 {
   0% {
     -webkit-transform: translateY(400%);
             transform: translateY(400%);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    opacity: 1;
   }
 }
 
@@ -281,10 +283,12 @@ h2 {
   0% {
     -webkit-transform: translateY(400%);
             transform: translateY(400%);
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+    opacity: 1;
   }
 }
 

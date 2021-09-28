@@ -218,9 +218,11 @@ h2 {
 @keyframes modalUp {
   0% {
     transform: translateY(400%);
+    opacity: 0;
   }
   100% {
     transform: translateY(0%);
+    opacity: 1;
   }
 }
 
