@@ -197,6 +197,7 @@ h2 {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  overflow: hidden;
 }
 
 /* Modal Content */
@@ -205,9 +206,22 @@ h2 {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 70%;
   font-size: 5rem;
   border-radius: 10% / 30%;
+  animation-name: modalUp;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.57,-0.01, 0.6, 1.8);
+}
+
+@keyframes modalUp {
+  0% {
+    transform: translateY(400%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 /* The Close Button */

@@ -244,6 +244,7 @@ h2 {
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
+  overflow: hidden;
 }
 
 /* Modal Content */
@@ -252,9 +253,39 @@ h2 {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 70%;
   font-size: 5rem;
   border-radius: 10% / 30%;
+  -webkit-animation-name: modalUp;
+          animation-name: modalUp;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.57, -0.01, 0.6, 1.8);
+          animation-timing-function: cubic-bezier(0.57, -0.01, 0.6, 1.8);
+}
+
+@-webkit-keyframes modalUp {
+  0% {
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes modalUp {
+  0% {
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 /* The Close Button */

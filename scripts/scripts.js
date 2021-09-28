@@ -54,6 +54,7 @@ function getNewQuestion() {
     .then((data) => {
         if (questionsAlreadyDone.length === 5) {
             modal.style.display = "block";
+            
         } else {
         let randomQuestionIndex = Math.floor(Math.random() * data.length);
         while (questionsAlreadyDone.includes(randomQuestionIndex)) {
