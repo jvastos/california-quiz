@@ -736,6 +736,12 @@ select:hover {
   background-color: lightgrey;
 }
 
+@media screen and (max-width: 500px) {
+  .video-off {
+    background-color: transparent;
+  }
+}
+
 /* The switch - the box around the slider */
 .switch {
   display: inline-block;

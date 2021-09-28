@@ -619,6 +619,10 @@ select {
 
 .video-off {
   background-color: lightgrey;
+
+  @media screen and (max-width: 500px) {
+    background-color: transparent;
+  }
 }
 
 /* The switch - the box around the slider */
