@@ -102,3 +102,19 @@ function toggleBg() {
         document.querySelector(".switch-text").classList.toggle("video-off");
         }
 }
+
+//FIREBASE
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDe3XtpFLEPhy5dqTiCEWpzKXtMWzagmtw",
+    authDomain: "california-dreamin-form.firebaseapp.com",
+    projectId: "california-dreamin-form",
+    storageBucket: "california-dreamin-form.appspot.com",
+    messagingSenderId: "526235533541",
+    appId: "1:526235533541:web:b17e224fe0aba7a1bbd40c"
+  };
+
+  //INIT FIREBASE
+
+  firebase.initializeApp(firebaseConfig);
+  let firestore = firebase.firestore();
