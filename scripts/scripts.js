@@ -83,6 +83,13 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// PRESSING ESC TO CLOSE MODAL
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === "block") {{
+        e.preventDefault();
+        window.location.reload(false); 
+    }}});
 
 //TOGGLE BACKGROUND
 
