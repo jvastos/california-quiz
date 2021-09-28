@@ -443,8 +443,14 @@ input, label {
 
 /* On mouse-over, add a grey background color */
 .container-checkbox:hover input ~ .checkmark-checkbox {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+/* On focus (tab) */
+.container-checkbox:focus-within input ~ .checkmark-checkbox {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -539,10 +545,16 @@ input, label {
   }
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over */
 .container:hover input ~ .checkmark {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+/* On focus (tab) */
+.container:focus-within input ~ .checkmark {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -728,6 +740,12 @@ select:hover {
   position: relative;
   left: calc(50% - 70px);
   top: 4%;
+  border-radius: 34px;
+}
+
+.switch:focus-within {
+  -webkit-box-shadow: 0px 0px 5px 5px #ff5067;
+          box-shadow: 0px 0px 5px 5px #ff5067;
 }
 
 @media screen and (max-width: 500px) {
