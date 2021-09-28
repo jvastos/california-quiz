@@ -98,5 +98,6 @@ function toggleBg() {
 
     if (switchButton.checked) {
         document.getElementById("main-container").classList.toggle("background-image");
-    }
+        document.querySelector(".switch-text").classList.toggle("video-off");
+        }
 }

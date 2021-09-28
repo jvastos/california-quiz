@@ -732,6 +732,10 @@ select:hover {
   }
 }
 
+.video-off {
+  background-color: lightgrey;
+}
+
 /* The switch - the box around the slider */
 .switch {
   display: inline-block;

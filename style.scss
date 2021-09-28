@@ -73,6 +73,8 @@ body {
   background-image: none;
 }
 
+
+
 h1 {
   font-size: 4.8rem;
     
@@ -615,6 +617,10 @@ select {
   }
 }
 
+.video-off {
+  background-color: lightgrey;
+}
+
 /* The switch - the box around the slider */
 
 .switch {
@@ -717,3 +723,5 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;  
 }
+
+
