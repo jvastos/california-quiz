@@ -8,10 +8,10 @@ window.onload = function() {
 }
 
 
-// MODAL
+// RESULT MODAL
 
-document.getElementById("myBtn").addEventListener("click", function submitBreak(event){
-    event.preventDefault()
+document.getElementById("myBtn").addEventListener("click", function submitBreak(e){
+    e.preventDefault()
   });
 
 // Get the modal
@@ -22,9 +22,6 @@ var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -41,11 +38,74 @@ window.onclick = function(event) {
 }
 
 
+//EXIT INTENT MODAL
+
+let modalExitCounter = 0;
+
+document.addEventListener("mouseleave", function(e){
+    if( e.clientY < 0 && modalExitCounter === 0 )
+    {
+        // Get the modal
+        var modal = document.getElementById("myModal-exit");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[1];
+
+        //Make the modal appear
+        modal.style.display = "block";
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+    }
+
+    modalExitCounter++;
+
+}, false); 
+
+
+
+// RIGHT ANSWERS
+
+let rightAnswers = ["brown", "grey", "walk", "safe", "warm", "stop", "knees", "pretend", "cold", "dreamin1", "dreamin2", "dreamin3", "california", "winter"];
+
+
 // GETTING A NEW QUESTION - JSON FETCHING
 
 let questionsAlreadyDone = [];
 
+let answers = [];
+
+let score = 0;
+
 function getNewQuestion() {
+
+    //GETTING DATA FROM FORM
+    
+    let form = document.getElementById("californiaForm");
+
+    if (document.getElementById("question-input").children.length > 0) {
+        for (let i = 0; i < form.elements.length; i++ ) {
+        let e = form.elements[i];
+        if (e.type === "checkbox" || e.type === "radio") {
+            if (e.checked === true) {
+                answers.push(e.value)
+        }} 
+        else {
+            answers.push(e.value.toLowerCase())
+        };
+    }}
+    
+    console.log(answers);
+
     document.getElementById("myBtn").innerHTML = "Next";
     document.getElementById("myBtn").classList.add("myBtn--mod");
     document.getElementById("game-title").classList.add("h1--mod");
@@ -54,7 +114,8 @@ function getNewQuestion() {
     .then((data) => {
         if (questionsAlreadyDone.length === 5) {
             modal.style.display = "block";
-            
+            getScore();
+            console.log("score : " + score);
         } else {
         let randomQuestionIndex = Math.floor(Math.random() * data.length);
         while (questionsAlreadyDone.includes(randomQuestionIndex)) {
@@ -75,6 +136,18 @@ function getNewQuestion() {
 })};
 
 
+//GETTING SCORE
+
+function getScore () {
+
+for (let i = 0; i < answers.length; i++ ) {
+    if (rightAnswers.includes(answers[i])) {
+        score++
+        }
+    }   
+};
+
+
 // PRESSING ENTER TO PRESS BUTTON
 
 document.addEventListener('keydown', (e) => {
@@ -91,6 +164,7 @@ document.addEventListener('keydown', (e) => {
         e.preventDefault();
         window.location.reload(false); 
     }}});
+    
 
 //TOGGLE BACKGROUND
 

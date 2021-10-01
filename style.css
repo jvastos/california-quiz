@@ -251,10 +251,10 @@ h2 {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 0 40px 50px 40px;
   border: 1px solid #888;
   width: 70%;
-  font-size: 5rem;
+  font-size: 2.5rem;
   border-radius: 10% / 30%;
   -webkit-animation-name: modalUp;
           animation-name: modalUp;
@@ -264,6 +264,19 @@ h2 {
           animation-iteration-count: 1;
   -webkit-animation-timing-function: cubic-bezier(0.57, -0.01, 0.6, 1.8);
           animation-timing-function: cubic-bezier(0.57, -0.01, 0.6, 1.8);
+}
+
+@media screen and (max-width: 500px) {
+  .modal-content {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .modal-content {
+    font-size: 3rem;
+    width: 40%;
+  }
 }
 
 @-webkit-keyframes modalUp {
@@ -302,16 +315,24 @@ h2 {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  left: 100%;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
+  left: 103%;
+  -webkit-transform: translateY(-28%);
+          transform: translateY(-28%);
 }
 
 @media screen and (max-width: 500px) {
   .close {
-    left: 90%;
-    -webkit-transform: translateY(-20%);
-            transform: translateY(-20%);
+    left: 125%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .close {
+    left: 104%;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
   }
 }
 

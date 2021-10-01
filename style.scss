@@ -185,7 +185,7 @@ h2 {
 // <Modal>
 
 /* The Modal (background) */
-.modal {
+.modal{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index:1; /* Sit on top */
@@ -204,15 +204,25 @@ h2 {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 0 40px 50px 40px;
   border: 1px solid #888;
   width: 70%;
-  font-size: 5rem;
+  font-size: 2.5rem;
   border-radius: 10% / 30%;
   animation-name: modalUp;
   animation-duration: 0.3s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.57,-0.01, 0.6, 1.8);
+
+  @media screen and (max-width: 500px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 3rem;
+    width: 40%;
+  }
+
 }
 
 @keyframes modalUp {
@@ -235,12 +245,16 @@ h2 {
   display: block;
   width: fit-content;
   position: relative;
-  left: 100%;
-  transform: translateY(-60%);
+  left: 103%;
+  transform: translateY(-28%);
 
   @media screen and (max-width: 500px) {
-    left: 90%;
-    transform: translateY(-20%);
+    left: 125%;
+    transform: translateY(-30%);
+  }
+  @media screen and (min-width: 1600px) {
+    left: 104%;
+    transform: translateY(-25%);
   }
 }
 
@@ -746,5 +760,3 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;  
 }
-
-

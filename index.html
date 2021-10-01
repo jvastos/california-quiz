@@ -15,7 +15,7 @@
 <body>
     <main id="main-container" class="main-container hide-scroll-chrome::-webkit-scrollbar hide-scroll-firefox">
         <h1 id="game-title">The Mamas, The Papas <br> and The Forms</h1>
-            <form id="californiaForm" method="POST">
+            <form id="californiaForm" action="" method="POST">
                 <h2 id="question-title"></h2>
                 <div autofocus id="question-input"></div>
             </form>
@@ -46,6 +46,15 @@
           <p>Rad!</p>
         </div>
     </div>
+
+    <div id="myModal-exit" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Friendly reminder. Googling now is totally not tubular, dude.</p>
+        </div>
+    </div>
+
     <script type="text/javascript" src="./scripts/scripts.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
