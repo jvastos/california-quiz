@@ -15,13 +15,13 @@ document.getElementById("myBtn").addEventListener("click", function submitBreak(
   });
 
 // Get the modal
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+let btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -43,7 +43,7 @@ window.onclick = function(event) {
 let modalExitCounter = 0;
 
 document.addEventListener("mouseleave", function(e){
-    if( e.clientY < 0 && modalExitCounter === 0 && modal.style.display === "none")
+    if( e.clientY < 0 && modalExitCounter === 0 && document.getElementById("myModal").style.display === "none")
     {
         // Get the modal
         var modal = document.getElementById("myModal-exit");
@@ -197,6 +197,8 @@ let firestore = firebase.firestore();
 
 let db = firestore.collection("californiaDreaminData");
 
+//SEND ANSWERS TO DATABASE
+
 function sendToDb () {
     
 let scoreInput = score;
@@ -204,7 +206,7 @@ db.doc().set(
     {score: scoreInput}
 )};
 
-//GETTING ALL DOCUMENTS FROM FIREBASE
+//GETTING DATA FROM FIREBASE AND CREATING FEEDBACK FOR THE USER
 
 let allScores = [];
 
@@ -218,17 +220,26 @@ function getResult () {
         console.log("summUp : " + summUp);
             let average = Math.floor(summUp / allScores.length);
         console.log("average : " + average);
+            let resultBoxTitle = document.getElementById("result-title");
             let resultBox = document.getElementById("result");
             if (score === 0) {
-                resultBox.innerHTML = `You got ${score} points.</br>C'mon. This is the 70s.</br>Go hard or go home.` 
+                resultBoxTitle.innerHTML = `Oh...` 
+                resultBox.innerHTML = `You got ${score} points.</br> But c'mon. This is the 70s.</br>Just take another ride.` 
             } else if (score === 1) {
-                resultBox.innerHTML = `You got ${score} point.</br>That's a bit below average.</br>What about trying again?` 
+                resultBoxTitle.innerHTML = `Ok...` 
+                resultBox.innerHTML = `You got ${score} point.</br>That's a bit below average.</br>Another ride?` 
             }else if (score < average) {
-                resultBox.innerHTML = `You got ${score} points.</br>That's below the average thoug.</br>You can try again to improve your score.` 
+                resultBoxTitle.innerHTML = `Cool!` 
+                resultBox.innerHTML = `You got ${score} points.</br>That's a bit below average thoug.</br>Another ride to improve it?` 
             } else if (score === average) {
+                resultBoxTitle.innerHTML = `Right on!` 
                 resultBox.innerHTML = `You got ${score} points.</br>That's spot on the average.</br>You can always try again to improve your score.`     
             } else if (score > average) {
-                resultBox.innerHTML = `You got ${score} points.</br>And that's quite above the average.</br>Tubular!`    
+                resultBoxTitle.innerHTML = `Rad!` 
+                resultBox.innerHTML = `You got ${score} points.</br>That's above the average.</br>You're the joint my dude(t)!`    
+            } else if (score > average + 2) {
+                resultBoxTitle.innerHTML = `Gnarly!` 
+                resultBox.innerHTML = `You got ${score} points.</br>That's quite above the average.</br>You're sick my dude(t)!`    
             }
     }
     );
@@ -236,18 +247,3 @@ function getResult () {
     )
     
 };
-
-
-
-
-
-/*
-firebase.database().ref('californiaDreaminData').once('value', function(snapshot){
-    snapshot.forEach(
-        function (ChildSnapshot) {
-            let scoreRetrieved = ChildSnapshot.val().score;
-            console.log(scoreRetrieved);
-        }
-    )
-})
-*/
