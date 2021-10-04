@@ -215,7 +215,21 @@ h2 {
   animation-timing-function: cubic-bezier(0.57,-0.01, 0.6, 1.8);
 
   @media screen and (max-width: 500px) {
-    font-size: 2rem;
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 3rem;
+    width: 40%;
+  }
+
+}
+
+#result-title {
+  font-size: 5rem;
+
+  @media screen and (max-width: 500px) {
+    font-size: 3rem;
   }
 
   @media screen and (min-width: 1600px) {
@@ -320,6 +334,7 @@ body, html {
     @media screen and (min-width: 1600px) {
        font-size: 120px;
     }
+
   }
 }
 

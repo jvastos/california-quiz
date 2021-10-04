@@ -9,7 +9,7 @@
     },
     {
     "label":"What I have been doing today:",
-    "input":"<select id='doingToday' name='doingToday'>\n<option value='walk'>Been for a walk</option>\n<option value='a wash'>Washing the car</option>\n<option value='a barbecue'>Barbecueing with the family</option>\n<option value='a jump'>Jumping from a Jefferson's Airplane</option>\n</select>"
+    "input":"<select id='doingToday' name='doingToday'>\n<option value='a wash'>Washing the car</option>\n<option value='walk'>Been for a walk</option>\n<option value='a barbecue'>Barbecueing with the family</option>\n<option value='a jump'>Jumping from a Jefferson's Airplane</option>\n</select>"
     },
     {
     "label":"How would you be if you were in L.A.?",

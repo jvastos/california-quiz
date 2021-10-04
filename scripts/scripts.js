@@ -43,7 +43,7 @@ window.onclick = function(event) {
 let modalExitCounter = 0;
 
 document.addEventListener("mouseleave", function(e){
-    if( e.clientY < 0 && modalExitCounter === 0 )
+    if( e.clientY < 0 && modalExitCounter === 0 && modal.style.display === "none")
     {
         // Get the modal
         var modal = document.getElementById("myModal-exit");
@@ -103,8 +103,6 @@ function getNewQuestion() {
             answers.push(e.value.toLowerCase())
         };
     }}
-    
-    console.log(answers);
 
     document.getElementById("myBtn").innerHTML = "Next";
     document.getElementById("myBtn").classList.add("myBtn--mod");
@@ -115,7 +113,11 @@ function getNewQuestion() {
         if (questionsAlreadyDone.length === 5) {
             modal.style.display = "block";
             getScore();
+            sendToDb();
             console.log("score : " + score);
+            console.log(answers);
+            console.log(questionsAlreadyDone);
+            getResult();
         } else {
         let randomQuestionIndex = Math.floor(Math.random() * data.length);
         while (questionsAlreadyDone.includes(randomQuestionIndex)) {
@@ -126,7 +128,6 @@ function getNewQuestion() {
         document.getElementById("question-title").innerHTML = label;
         document.getElementById("question-input").innerHTML = question;
         questionsAlreadyDone.push(randomQuestionIndex);
-        console.log(questionsAlreadyDone);
     };
 
     if (questionsAlreadyDone.length > 4) {
@@ -177,9 +178,10 @@ function toggleBg() {
         }
 }
 
+
 //FIREBASE
 
-const firebaseConfig = {
+let firebaseConfig = {
     apiKey: "AIzaSyDe3XtpFLEPhy5dqTiCEWpzKXtMWzagmtw",
     authDomain: "california-dreamin-form.firebaseapp.com",
     projectId: "california-dreamin-form",
@@ -188,7 +190,64 @@ const firebaseConfig = {
     appId: "1:526235533541:web:b17e224fe0aba7a1bbd40c"
   };
 
-  //INIT FIREBASE
+//INIT FIREBASE
 
-  firebase.initializeApp(firebaseConfig);
-  let firestore = firebase.firestore();
+firebase.initializeApp(firebaseConfig);
+let firestore = firebase.firestore();
+
+let db = firestore.collection("californiaDreaminData");
+
+function sendToDb () {
+    
+let scoreInput = score;
+db.doc().set(
+    {score: scoreInput}
+)};
+
+//GETTING ALL DOCUMENTS FROM FIREBASE
+
+let allScores = [];
+
+function getResult () {
+    db.get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+            allScores.push(doc.data().score);
+        console.log(allScores);
+            let reducer = ((a, b) => a + b);
+            let summUp = allScores.reduce(reducer);
+        console.log("summUp : " + summUp);
+            let average = Math.floor(summUp / allScores.length);
+        console.log("average : " + average);
+            let resultBox = document.getElementById("result");
+            if (score === 0) {
+                resultBox.innerHTML = `You got ${score} points.</br>C'mon. This is the 70s.</br>Go hard or go home.` 
+            } else if (score === 1) {
+                resultBox.innerHTML = `You got ${score} point.</br>That's a bit below average.</br>What about trying again?` 
+            }else if (score < average) {
+                resultBox.innerHTML = `You got ${score} points.</br>That's below the average thoug.</br>You can try again to improve your score.` 
+            } else if (score === average) {
+                resultBox.innerHTML = `You got ${score} points.</br>That's spot on the average.</br>You can always try again to improve your score.`     
+            } else if (score > average) {
+                resultBox.innerHTML = `You got ${score} points.</br>And that's quite above the average.</br>Tubular!`    
+            }
+    }
+    );
+    }
+    )
+    
+};
+
+
+
+
+
+/*
+firebase.database().ref('californiaDreaminData').once('value', function(snapshot){
+    snapshot.forEach(
+        function (ChildSnapshot) {
+            let scoreRetrieved = ChildSnapshot.val().score;
+            console.log(scoreRetrieved);
+        }
+    )
+})
+*/
