@@ -159,7 +159,6 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && modal.style.display !== "block") {
         e.preventDefault();
         getNewQuestion();
-        console.log("enter pressed");
     }
 });
 
