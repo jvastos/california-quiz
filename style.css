@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
 }
 
@@ -14,9 +15,11 @@ body {
   scrollbar-width: none;
   /* hide scroll-bar in Firefox */
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 body .hide-scroll-chrome::-webkit-scrollbar {
   display: none;
 }
@@ -30,16 +33,25 @@ body .hide-scroll-chrome::-webkit-scrollbar {
   background-size: cover;
   background-position-x: center;
   background-color: sienna;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 15%/40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 15% / 40%;
   padding: 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 1.1rem;
   overflow-x: hidden;
   -ms-overflow-style: none;
@@ -47,17 +59,20 @@ body .hide-scroll-chrome::-webkit-scrollbar {
   scrollbar-width: none;
   /* hide scroll-bar in Firefox */
 }
+
 .main-container::-webkit-scrollbar {
   display: none;
 }
+
 .main-container .hide-scroll-chrome::-webkit-scrollbar {
   display: none;
 }
+
 @media screen and (max-width: 500px) {
   .main-container {
     width: calc(100% - 10px);
     height: calc(100% - 10px);
-    border-radius: 5%/10%;
+    border-radius: 5% / 10%;
   }
 }
 
@@ -68,11 +83,13 @@ body .hide-scroll-chrome::-webkit-scrollbar {
 h1 {
   font-size: 4.8rem;
 }
+
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 3rem;
   }
 }
+
 @media screen and (min-width: 1600px) {
   h1 {
     font-size: 120px;
@@ -82,11 +99,13 @@ h1 {
 .h1--mod {
   font-size: 2rem;
 }
+
 @media screen and (max-width: 500px) {
   .h1--mod {
     display: none;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .h1--mod {
     font-size: 35px;
@@ -95,15 +114,24 @@ h1 {
 
 form {
   font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 @media screen and (max-width: 500px) {
   form {
     font-size: 1.8rem;
   }
 }
+
 @media screen and (min-width: 1600px) {
   form {
     font-size: 50px;
@@ -112,9 +140,15 @@ form {
 
 #question-input {
   text-align: left;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 5vw;
 }
 
@@ -124,6 +158,8 @@ h2 {
 
 .myBtn {
   font-family: "Righteous", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 3vh 5vh;
   font-size: 5rem;
@@ -134,26 +170,36 @@ h2 {
   color: white;
   background-color: #ff5067;
   border: none;
-  border-radius: 15%/40%;
-  box-shadow: 0 9px #7b0021;
-  align-self: center;
+  border-radius: 15% / 40%;
+  -webkit-box-shadow: 0 9px #7b0021;
+          box-shadow: 0 9px #7b0021;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
+
 .myBtn:hover {
   background-color: #cc4153;
 }
+
 .myBtn:focus {
   border: 2px solid white;
 }
+
 .myBtn:active {
   background-color: #b13848;
-  box-shadow: 0 5px #4e0015;
-  transform: translateY(4px);
+  -webkit-box-shadow: 0 5px #4e0015;
+          box-shadow: 0 5px #4e0015;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
+
 @media screen and (max-width: 500px) {
   .myBtn {
     font-size: 2rem;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .myBtn {
     font-size: 80px;
@@ -163,11 +209,13 @@ h2 {
 .myBtn--mod {
   font-size: 1.6rem;
 }
+
 @media screen and (max-width: 500px) {
   .myBtn--mod {
     font-size: 1.5rem;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .myBtn--mod {
     font-size: 30px;
@@ -207,17 +255,23 @@ h2 {
   border: 1px solid #888;
   width: 70%;
   font-size: 2.5rem;
-  border-radius: 10%/30%;
-  animation-name: modalUp;
-  animation-duration: 0.3s;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.57, -0.01, 0.6, 1.8);
+  border-radius: 10% / 30%;
+  -webkit-animation-name: modalUp;
+          animation-name: modalUp;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.57, -0.01, 0.6, 1.8);
+          animation-timing-function: cubic-bezier(0.57, -0.01, 0.6, 1.8);
 }
+
 @media screen and (max-width: 500px) {
   .modal-content {
     font-size: 1.3rem;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .modal-content {
     font-size: 3rem;
@@ -228,11 +282,13 @@ h2 {
 #result-title {
   font-size: 5rem;
 }
+
 @media screen and (max-width: 500px) {
   #result-title {
     font-size: 3rem;
   }
 }
+
 @media screen and (min-width: 1600px) {
   #result-title {
     font-size: 3rem;
@@ -240,37 +296,60 @@ h2 {
   }
 }
 
-@keyframes modalUp {
+@-webkit-keyframes modalUp {
   0% {
-    transform: translateY(400%);
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
     opacity: 0;
   }
   100% {
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
     opacity: 1;
   }
 }
+
+@keyframes modalUp {
+  0% {
+    -webkit-transform: translateY(400%);
+            transform: translateY(400%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 /* The Close Button */
 .close {
   color: grey;
   font-size: 2.5rem;
   font-weight: bold;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
   left: 103%;
-  transform: translateY(-28%);
+  -webkit-transform: translateY(-28%);
+          transform: translateY(-28%);
 }
+
 @media screen and (max-width: 500px) {
   .close {
     left: 125%;
-    transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
   }
 }
+
 @media screen and (min-width: 1600px) {
   .close {
     left: 104%;
-    transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
   }
 }
 
@@ -293,9 +372,15 @@ body, html {
   top: 0;
   left: 0;
   background-color: #7B0021;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   scrollbar-width: none;
   overflow: hidden;
 }
@@ -307,29 +392,40 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @media screen and (max-width: 500px) {
   .loader {
     background-size: 100%;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .loader {
     background-size: 70%;
   }
 }
+
 .loader p {
   z-index: 1;
   font-size: 5rem;
 }
+
 @media screen and (max-width: 500px) {
   .loader p {
     font-size: 2.5rem;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .loader p {
     font-size: 120px;
@@ -337,17 +433,28 @@ body, html {
 }
 
 .blink_me1 {
-  animation: blinker 1s linear infinite;
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
 }
 
 .blink_me2 {
-  animation: blinker 1s linear infinite;
-  animation-delay: 0.3s;
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .blink_me3 {
-  animation: blinker 1s linear infinite;
-  animation-delay: 0.6s;
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes blinker {
@@ -355,6 +462,7 @@ body, html {
     opacity: 0;
   }
 }
+
 input, label {
   cursor: pointer;
 }
@@ -372,6 +480,7 @@ input, label {
   -ms-user-select: none;
   user-select: none;
 }
+
 @media screen and (min-width: 1600px) {
   .container-checkbox {
     font-size: 3rem;
@@ -398,6 +507,7 @@ input, label {
   border: 3px solid #ff5067;
   border-radius: 8px;
 }
+
 @media screen and (min-width: 1600px) {
   .checkmark-checkbox {
     top: 13px;
@@ -408,12 +518,14 @@ input, label {
 
 /* On mouse-over, add a grey background color */
 .container-checkbox:hover input ~ .checkmark-checkbox {
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* On focus (tab) */
 .container-checkbox:focus-within input ~ .checkmark-checkbox {
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -439,6 +551,7 @@ input, label {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 @media screen and (max-width: 500px) {
   .container-checkbox .checkmark-checkbox:after {
     left: 7px;
@@ -447,6 +560,7 @@ input, label {
     height: 11px;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .container-checkbox .checkmark-checkbox:after {
     background-size: 70%;
@@ -470,6 +584,7 @@ input, label {
   -ms-user-select: none;
   user-select: none;
 }
+
 @media screen and (min-width: 1600px) {
   .container {
     font-size: 3rem;
@@ -496,6 +611,7 @@ input, label {
   border-radius: 50%;
   border: 3px solid #ff5067;
 }
+
 @media screen and (min-width: 1600px) {
   .checkmark {
     top: 13px;
@@ -506,12 +622,14 @@ input, label {
 
 /* On mouse-over */
 .container:hover input ~ .checkmark {
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* On focus (tab) */
 .container:focus-within input ~ .checkmark {
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -535,6 +653,7 @@ input, label {
   border-radius: 50%;
   background: white;
 }
+
 @media screen and (min-width: 1600px) {
   .container .checkmark:after {
     top: 3px;
@@ -553,36 +672,68 @@ textarea {
   text-align: center;
   padding: 20px;
   border: 5px solid #ff5067;
-  border-radius: 10%/30%;
+  border-radius: 10% / 30%;
+  -webkit-transition: background-color 0.2s ease, -webkit-transform;
+  transition: background-color 0.2s ease, -webkit-transform;
   transition: transform, background-color 0.2s ease;
+  transition: transform, background-color 0.2s ease, -webkit-transform;
   overflow: hidden;
   max-width: 85%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   white-space: nowrap;
 }
+
 @media screen and (min-width: 1600px) {
   textarea {
     font-size: 3rem;
   }
 }
+
+textarea::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgrey;
+  opacity: 1;
+  /* Firefox */
+}
+
+textarea:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgrey;
+  opacity: 1;
+  /* Firefox */
+}
+
+textarea::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: lightgrey;
+  opacity: 1;
+  /* Firefox */
+}
+
 textarea::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: lightgrey;
   opacity: 1;
   /* Firefox */
 }
+
 textarea:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: lightgrey;
 }
+
 textarea::-ms-input-placeholder {
   /* Microsoft Edge */
   color: lightgrey;
 }
+
 textarea:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 select {
@@ -603,7 +754,8 @@ select {
   background-position: center right;
   background-repeat: no-repeat;
   border: 5px solid #ff5067;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
   font-size: 2rem;
   overflow: hidden;
   padding: 20px;
@@ -612,18 +764,24 @@ select {
   font-family: "Righteous", sans-serif;
   border-radius: 35px;
   width: 115%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
+
 @media screen and (min-width: 1600px) {
   select {
     font-size: 3rem;
   }
 }
+
 select:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
+
 select:hover {
   cursor: pointer;
 }
@@ -639,6 +797,7 @@ select:hover {
   color: white;
   padding: 0px 10px 2px 10px;
 }
+
 @media screen and (max-width: 500px) {
   .switch-text {
     background-color: transparent;
@@ -651,6 +810,7 @@ select:hover {
 .video-off {
   background-color: lightgrey;
 }
+
 @media screen and (max-width: 500px) {
   .video-off {
     background-color: transparent;
@@ -667,9 +827,12 @@ select:hover {
   top: 4%;
   border-radius: 34px;
 }
+
 .switch:focus-within {
-  box-shadow: 0px 0px 5px 5px #ff5067;
+  -webkit-box-shadow: 0px 0px 5px 5px #ff5067;
+          box-shadow: 0px 0px 5px 5px #ff5067;
 }
+
 @media screen and (max-width: 500px) {
   .switch {
     width: 70px;
@@ -696,9 +859,10 @@ select:hover {
   right: 0;
   bottom: 0;
   background-color: #7b0021;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
+
 @media screen and (max-width: 500px) {
   .slider {
     background-color: transparent;
@@ -714,9 +878,10 @@ select:hover {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
+
 @media screen and (max-width: 500px) {
   .slider:before {
     height: 16px;
@@ -727,6 +892,7 @@ select:hover {
 input:checked + .slider {
   background-color: lightgrey;
 }
+
 @media screen and (max-width: 500px) {
   input:checked + .slider {
     background-color: transparent;
@@ -736,13 +902,12 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
 @media screen and (max-width: 500px) {
   input:checked + .slider:before {
     -webkit-transform: translateX(40px);
-    -ms-transform: translateX(40px);
     transform: translateX(40px);
   }
 }
@@ -755,5 +920,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 /*# sourceMappingURL=style.css.map */

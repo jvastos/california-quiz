@@ -40,34 +40,38 @@ window.onclick = function(event) {
 
 //EXIT INTENT MODAL
 
-let modalExitCounter = 0;
+let exitModalCounter = 0;
 
 document.addEventListener("mouseleave", function(e){
-    if( e.clientY < 0 && modalExitCounter === 0 && document.getElementById("myModal").style.display === "none")
-    {
+    if( e.clientY < 0 && exitModalCounter === 0 && modal.style.display != "block") {
+
         // Get the modal
-        var modal = document.getElementById("myModal-exit");
+        let exitModal = document.getElementById("myModal-exit");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[1];
+        let span = document.getElementsByClassName("close")[1];
 
         //Make the modal appear
-        modal.style.display = "block";
+        exitModal.style.display = "block";
+
+       
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
-            modal.style.display = "none";
+            exitModal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
-            modal.style.display = "none";
+            if (event.target == exitModal) {
+                exitModal.style.display = "none";
             }
         }
+
+        exitModalCounter++;
     }
 
-    modalExitCounter++;
+    
 
 }, false); 
 
@@ -152,9 +156,10 @@ for (let i = 0; i < answers.length; i++ ) {
 // PRESSING ENTER TO PRESS BUTTON
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && modal.style.display !== "block") {
         e.preventDefault();
         getNewQuestion();
+        console.log("enter pressed");
     }
 });
 
