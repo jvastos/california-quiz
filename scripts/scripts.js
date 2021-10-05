@@ -238,10 +238,10 @@ function getResult () {
             } else if (score === average) {
                 resultBoxTitle.innerHTML = `Right on!` 
                 resultBox.innerHTML = `You got ${score} points.</br>That's spot on the average.</br>You can always try again to improve your score.`     
-            } else if (score > average) {
+            } else if (score > average && score < average + 2) {
                 resultBoxTitle.innerHTML = `Rad!` 
                 resultBox.innerHTML = `You got ${score} points.</br>That's above the average.</br>You're the joint my dude(t)!`    
-            } else if (score > average + 2) {
+            } else if (score >= average + 2) {
                 resultBoxTitle.innerHTML = `Gnarly!` 
                 resultBox.innerHTML = `You got ${score} points.</br>That's quite above the average.</br>You're sick my dude(t)!`    
             }
