@@ -28,7 +28,7 @@ body .hide-scroll-chrome::-webkit-scrollbar {
   max-width: 2000px;
   width: calc(100% - 40px);
   height: calc(100% - 40px);
-  background-image: url("./california-dreamin-mute.gif");
+  background-image: url("./california-dreamin.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
