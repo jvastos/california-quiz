@@ -350,7 +350,5 @@ MigrationBackup/
 .ionide/
 
 #Sass
-./
 *.css.map
-*.sass.map
 *.scss
