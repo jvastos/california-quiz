@@ -210,6 +210,10 @@ db.doc().set(
     {score: scoreInput}
 )};
 
+
+function calculateResult() {
+    console.log("test");
+};
 //GETTING DATA FROM FIREBASE AND CREATING FEEDBACK FOR THE USER
 
 let allScores = [];
